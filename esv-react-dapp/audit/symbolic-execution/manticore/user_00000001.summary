@@ -1,0 +1,21 @@
+Message: REVERT
+Last exception: REVERT
+3 accounts.
+* owner::
+Address: 0x560eefdabb7e7386419d3c2235335d65ceb8fa5a 
+Balance: 9999669923 (*)
+Storage: STORAGE_560eefdabb7e7386419d3c2235335d65ceb8fa5a
+
+* attacker::
+Address: 0xfc183a58a67d04fd76bd4200e515f0e248d66bed 
+Balance: 10000000000 
+Storage: STORAGE_fc183a58a67d04fd76bd4200e515f0e248d66bed
+
+* 0x1c802302418a89c9643b751ae6a872fd12f29527::
+Address: 0x1c802302418a89c9643b751ae6a872fd12f29527 
+Balance: 0 (*)
+Storage: STORAGE_1c802302418a89c9643b751ae6a872fd12f29527
+
+
+
+(*) Example solution given. Value is symbolic and may take other values

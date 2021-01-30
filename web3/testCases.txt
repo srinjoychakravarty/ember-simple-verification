@@ -1,0 +1,147 @@
+Manual Test Cases
+
+addInvestor()             ✅
+batchAddInvestors()       ✅
+batchBlacklistAdmins      ✅
+batchWhitelistAdmins()    ✅
+blackListAdmin()          ✅
+contractOwner()           ✅ 
+countAdmins()             ✅
+countInvestors()          ✅
+getAdmins()               ✅
+getAllInvestorAddresses() ✅
+getInvestor()             ✅
+removeInvestor()          ✅
+whitelistAdmin()          ✅
+verifySignatureAddress()  ✅
+fixed missing return boolean values exists for getInvestor() ✅
+updateInvestorSignature() ✅
+countSignatures()         ✅
+deleteInvestorSignature() ✅
+
+batchAddSignatures()      x
+batchDeleteSignatures()   x
+
+Latest Commit: ensure gas is not wasted for adding signatures to account uuids thats dont exist or trying to remove non existant signatures 
+Contract Compiled and Deployed to Rinkeby: https://rinkeby.etherscan.io/tx/0x96b34d4d7b65dfd1884550bef99c99ae9c154b05af5980f0f4e85d8467b606f9
+Rinkeby Contract Address: 0x74d4deab1ed18e6619d8cdd9f02a1940584376db
+Rinkeby Contract Owner = "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE908"
+
+Ethereum Address 2 = 0x14723a09acff6d2a60dcdf7aa4aff308fddc160c
+Ethereum Address 3 = 0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db
+Ethereum Address 4 = 0x583031d1113ad414f02576bd6afabfb302140225
+
+["0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db", "0x583031d1113ad414f02576bd6afabfb302140225"]
+["0x14723a09acff6d2a60dcdf7aa4aff308fddc160c", "0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db", "0x583031d1113ad414f02576bd6afabfb302140225"]
+Non Admin
+0xdd870fa1b7c4700f2bd7f44238821c26f7392148
+
+1. Reference (uuid): 
+27af56ee-e507-4c05-9415-56c1c5e48ff4
+
+2.Preimage (text)
+I confirm that I want this address to be visible via the ESV service with reference 27af56ee-e507-4c05-9415-56c1c5e48ff4
+
+3. Message Hash:
+"0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3"
+
+902, "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371b", "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE908"
+903, "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b2", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371c", "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE907"
+904, "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b1", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371d", "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE909"
+905, "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b4", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371e", "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE909"
+
+
+[902, 903], 
+["0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3", "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b2"], 
+["0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371b", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371c"], 
+["0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE908", "0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE907"]
+
+4. Signature:
+"0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371b"
+
+5. Account Verification
+This account signed the message: 0xa6c56c26e5758cac9d2ff67cc3687843f0aee908
+
+[902, 903]
+["0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3", "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b4"]   
+["0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa371b", "0xc7349eea5aa143f0bc043743f2ad0d1c37a2a47718bd649663ee8359e31c756047a60d6f623dc8d64ce78235ef0ce7ec1e0df7510a38b66527fb47f80c18aa372b"]
+[0xa6c56c26e5758cac9d2ff67cc3687843f0aee908, 0xa6c56c26e5758cac9d2ff67cc3687843f0aee958]
+
+
+([902, 903], 
+["0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3", "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b4"], 
+['[902, 903]', 
+'["0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b3", "0x2d44736a74ee82cb16c42d5ef8a9d0da58e96f7d9a9fc017f2532598ece1e0b4"]', 
+[...], 
+'[0xa6c56c26e5758cac9d2ff67cc3687843f0aee908, 0xa6c56c26e5758cac9d2ff67cc3687843f0aee958]'], 
+[0xa6c56c26e5758cac9d2ff67cc3687843f0aee908, 0xa6c56c26e5758cac9d2ff67cc3687843f0aee958]s
+
+["0x3Bc1D006EeF6cdf608097fCdfDD0CBCeB6011e94", "0x793960215a519cddeFE3e51B0FeDAbB9D377ec95"]
+["0x3Bc1D006EeF6cdf608097fCdfDD0CBCeB6011e94", "0x3Bc1D006EeF6cdf608097fCdfDD0CBCeB6011e94"]
+["0xa6c56C26e5758CaC9D2fF67cc3687843F0AEE908", "0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c"]
+
+[0x3Bc1D006EeF6cdf608097fCdfDD0CBCeB6011e94, 0x793960215a519cddeFE3e51B0FeDAbB9D377ec95]
+
+
+Functions to Test:
+0. setAdminDelete ✔️
+1. setAdminCreate ✔️
+2. setMultiAdminDelete(address[])
+3. setAccountSignatureUpdate
+4. setMultiESVItemSignatureUpdate
+5. setMultiAdminCreate(address[])
+
+2. setMultiAdminDelete(address[]) 
+
+Duplicates Erronouesly Detected
+["0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c", "0x793960215a519cddeFE3e51B0FeDAbB9D377ec95"]
+
+Works
+["0x793960215a519cddeFE3e51B0FeDAbB9D377ec95", "0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c"]
+
+
+Commits:
+1. v7.5.8 - added setAdminCreate() + emoji support
+2. v7.5.9 - added setAdminDelete() + changed prevent owner deletion assert to require
+
+0x793960215a519cddeFE3e51B0FeDAbB9D377ec95
+
+
+harden against invalid user inputs
+added in further rawtransaction paths for admin create and admin delete
+change hardcoded gas limit for every transaction to estimation
+Returns the amount of gas consumed which can be used as a gas estimate for executing this transaction publicly.
+>>> my_contract.functions.multiply7(3).estimateGas()
+signature request notification (gunjan)
+
+
+Multi Admin Create Sort Addresses
+Multi Admin Delete Sort Addresses
+Check MultiSig Create order dulicate bug
+Check MultiSig Delete order dulicate bug
+Order ESV Items Python End
+Add Event Emission
+
+
+
+["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x742d35Cc6634C0532925a3b844Bc454e4438f44e", "0x4E9ce36E442e55EcD9025B9a6E0D88485d628A67", "0x53d284357ec70cE289D6D64134DfAc8E511c8a3D", "0x66f820a414680B5bcda5eECA5dea238543F42054", "0xab7c74abC0C4d48d1bdad5DCB26153FC8780f83E", "0x61EDCDf5bb737ADffE5043706e7C5bb1f1a56eEA", "0xDc76CD25977E0a5Ae17155770273aD58648900D3"]
+
+
+	"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+		"0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+		"0x4E9ce36E442e55EcD9025B9a6E0D88485d628A67",
+		"0x53d284357ec70cE289D6D64134DfAc8E511c8a3D",
+		"0x66f820a414680B5bcda5eECA5dea238543F42054",
+		"0xab7c74abC0C4d48d1bdad5DCB26153FC8780f83E",
+		"0x61EDCDf5bb737ADffE5043706e7C5bb1f1a56eEA",
+		"0xDc76CD25977E0a5Ae17155770273aD58648900D3"
+
+admin_array = input
+admin_array = input[1:-1]
+admin_array = "".join(admin_array.split())
+strings = admin_array.split(",")
+new_strings = []
+for string in strings:
+    new_string = string[1:-1]
+    new_strings.append(new_string)
+sorted_admin_list = new_strings.sort()

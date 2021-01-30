@@ -1,0 +1,103 @@
+Compilation warnings/errors on ESV.sol:
+ESV.sol:2:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:
+ESV.bytesToAddress(bytes) (ESV.sol#137-143) uses assembly
+	- INLINE ASM (ESV.sol#139-143)
+ESV.getSignatureAddress(bytes32,bytes) (ESV.sol#300-331) uses assembly
+	- INLINE ASM (ESV.sol#311-318)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+ESV.setESVItemCreate(uint256) (ESV.sol#56-64) compares to a boolean constant:
+	-require(bool,string)(accounts[_userUUID].exists == false,ESV Item already exists, failed to re-add!) (ESV.sol#58)
+ESV.setESVItemSignatureUpdate(uint256,string,string,bytes) (ESV.sol#97-110) compares to a boolean constant:
+	-require(bool,string)(accounts[_userUUID].exists == true,ESVItem not created before update!) (ESV.sol#100)
+ESV.setESVItemSignatureUpdate(uint256,string,string,bytes) (ESV.sol#97-110) compares to a boolean constant:
+	-require(bool,string)(ethAddresses[ethAddress] == false,Eth Address already in system!) (ESV.sol#102)
+ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[]) (ESV.sol#112-135) compares to a boolean constant:
+	-require(bool,string)(accounts[_userUUID[i]].exists == true,ESVItem not created before update!) (ESV.sol#121)
+ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[]) (ESV.sol#112-135) compares to a boolean constant:
+	-require(bool,string)(ethAddresses[ethAddress] == false,Address already in system!) (ESV.sol#125)
+ESV.getMultiESVItem(uint256[]) (ESV.sol#145-163) compares to a boolean constant:
+	-require(bool,string)(accounts[_userUUID[i]].exists == true,ESVItem doesn't exist in system!) (ESV.sol#155)
+ESV.setMultiESVItemCreate(uint256[]) (ESV.sol#165-183) compares to a boolean constant:
+	-accounts[pendingAcct].exists == false (ESV.sol#176)
+ESV.setMultiESVItemCreate(uint256[]) (ESV.sol#165-183) compares to a boolean constant:
+	-require(bool,string)(accounts[_accts[i]].exists == false,ESVItem attempted already exists in system!) (ESV.sol#174)
+ESV.setAdminCreate(address) (ESV.sol#240-245) compares to a boolean constant:
+	-require(bool,string)(admins[_addr] == false,admin already exists!) (ESV.sol#242)
+ESV.setMultiAdminCreate(address[]) (ESV.sol#262-274) compares to a boolean constant:
+	-require(bool,string)(admins[_addrs[j]] == false,Admin already exists!) (ESV.sol#270)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+INFO:Detectors:
+Pragma version^0.5.0 (ESV.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter ESV.setESVItemCreate(uint256)._userUUID (ESV.sol#56) is not in mixedCase
+Parameter ESV.getESVItem(uint256)._userUUID (ESV.sol#66) is not in mixedCase
+Parameter ESV.setESVItemDelete(uint256)._userUUID (ESV.sol#81) is not in mixedCase
+Parameter ESV.setESVItemSignatureUpdate(uint256,string,string,bytes)._userUUID (ESV.sol#97) is not in mixedCase
+Parameter ESV.setESVItemSignatureUpdate(uint256,string,string,bytes)._msg (ESV.sol#97) is not in mixedCase
+Parameter ESV.setESVItemSignatureUpdate(uint256,string,string,bytes)._sig (ESV.sol#97) is not in mixedCase
+Parameter ESV.setESVItemSignatureUpdate(uint256,string,string,bytes)._ethaddr (ESV.sol#97) is not in mixedCase
+Parameter ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[])._userUUID (ESV.sol#112) is not in mixedCase
+Parameter ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[])._msg (ESV.sol#112) is not in mixedCase
+Parameter ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[])._sig (ESV.sol#112) is not in mixedCase
+Parameter ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[])._ethaddr (ESV.sol#112) is not in mixedCase
+Parameter ESV.getMultiESVItem(uint256[])._userUUID (ESV.sol#145) is not in mixedCase
+Parameter ESV.setMultiESVItemCreate(uint256[])._accts (ESV.sol#165) is not in mixedCase
+Parameter ESV.setESVItemSignatureDelete(uint256)._userUUID (ESV.sol#208) is not in mixedCase
+Parameter ESV.setAdminCreate(address)._addr (ESV.sol#240) is not in mixedCase
+Parameter ESV.setAdminDelete(address)._addr (ESV.sol#246) is not in mixedCase
+Parameter ESV.setMultiAdminCreate(address[])._addrs (ESV.sol#262) is not in mixedCase
+Parameter ESV.setMultiAdminDelete(address[])._addrs (ESV.sol#276) is not in mixedCase
+Variable ESV.Signatures (ESV.sol#9) is not in mixedCase
+Variable ESV.MessageHashes (ESV.sol#12) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+getContractOwner() should be declared external:
+	- ESV.getContractOwner() (ESV.sol#51-54)
+setESVItemCreate(uint256) should be declared external:
+	- ESV.setESVItemCreate(uint256) (ESV.sol#56-64)
+getESVItem(uint256) should be declared external:
+	- ESV.getESVItem(uint256) (ESV.sol#66-69)
+getAllESVItemIDs() should be declared external:
+	- ESV.getAllESVItemIDs() (ESV.sol#71-74)
+getESVItemCount() should be declared external:
+	- ESV.getESVItemCount() (ESV.sol#76-79)
+setESVItemDelete(uint256) should be declared external:
+	- ESV.setESVItemDelete(uint256) (ESV.sol#81-95)
+setESVItemSignatureUpdate(uint256,string,string,bytes) should be declared external:
+	- ESV.setESVItemSignatureUpdate(uint256,string,string,bytes) (ESV.sol#97-110)
+setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[]) should be declared external:
+	- ESV.setMultiESVItemSignatureUpdate(uint256[],string[],string[],bytes[]) (ESV.sol#112-135)
+getMultiESVItem(uint256[]) should be declared external:
+	- ESV.getMultiESVItem(uint256[]) (ESV.sol#145-163)
+setMultiESVItemCreate(uint256[]) should be declared external:
+	- ESV.setMultiESVItemCreate(uint256[]) (ESV.sol#165-183)
+setESVItemSignatureDelete(uint256) should be declared external:
+	- ESV.setESVItemSignatureDelete(uint256) (ESV.sol#208-238)
+setAdminDelete(address) should be declared external:
+	- ESV.setAdminDelete(address) (ESV.sol#246-261)
+setMultiAdminCreate(address[]) should be declared external:
+	- ESV.setMultiAdminCreate(address[]) (ESV.sol#262-274)
+setMultiAdminDelete(address[]) should be declared external:
+	- ESV.setMultiAdminDelete(address[]) (ESV.sol#276-298)
+getSignatureAddress(bytes32,bytes) should be declared external:
+	- ESV.getSignatureAddress(bytes32,bytes) (ESV.sol#300-331)
+getAllAdmins() should be declared external:
+	- ESV.getAllAdmins() (ESV.sol#333-336)
+getSignatureCount() should be declared external:
+	- ESV.getSignatureCount() (ESV.sol#338-341)
+getMessageHashCount() should be declared external:
+	- ESV.getMessageHashCount() (ESV.sol#343-346)
+getEthereumAddressCount() should be declared external:
+	- ESV.getEthereumAddressCount() (ESV.sol#348-351)
+getAdminCount() should be declared external:
+	- ESV.getAdminCount() (ESV.sol#353-356)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Slither:ESV.sol analyzed (1 contracts with 46 detectors), 54 result(s) found
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
